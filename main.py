@@ -1,4 +1,4 @@
-from src.trainer import train, test
+from src.trainer import train
 
 if __name__ == "__main__":
     trained_agent = train()

@@ -61,6 +61,7 @@ def train():
                 break
 
         fql_agent.epsilon = max(config.EPSILON_MIN, fql_agent.epsilon * config.EPSILON_DECAY)
+        fql_agent.alpha = max(config.ALPHA_MIN, fql_agent.alpha * config.ALPHA_DECAY)
         episode_rewards.append(total_reward)
         ma_deque.append(total_reward)
         moving_avg = float(np.mean(ma_deque))
@@ -68,7 +69,7 @@ def train():
             best_ma = moving_avg
 
         if episode % 10 == 0:
-            print(f"Ep {episode} reward {total_reward:.1f} MA({ma_window}) {moving_avg:.2f} eps {fql_agent.epsilon:.3f}")
+            print(f"Ep {episode} reward {total_reward:.1f} MA({ma_window}) {moving_avg:.2f} eps {fql_agent.epsilon:.3f} alpha {fql_agent.alpha:.3f}")
             
         if episode % 100 == 0:
             print("q_table stats: min {:.3f}, mean {:.3f}, max {:.3f}".format(
