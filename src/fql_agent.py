@@ -152,8 +152,8 @@ class FQLModel:
         self.Q.clear()
         self.truth_value(state)
         action = self.action_selection()
-        self.calculate_q_value()
         self.save_state_history()
+        self.calculate_q_value()
         return action
 
     def get_action(self, state: List[float]) -> int:
