@@ -6,7 +6,7 @@ A reinforcement learning implementation that combines fuzzy logic with Q-learnin
 
 This project implements a **Fuzzy Q-Learning (FQL)** agent that learns to balance a pole on a cart using fuzzy logic for state representation. Instead of discretizing the continuous state space, the agent uses trapezoidal membership functions to create fuzzy rules that naturally handle the continuous nature of the CartPole environment.
 
-https://github.com/user-attachments/assets/3eaf8bca-288d-47c9-b8e2-b9505b10ff01
+https://github.com/user-attachments/assets/92731f5c-2d29-4aa0-9124-edcca6cc8b29
 
 Example of the trained agent successfully balancing the pole after 1,251 episodes of training.
 ## Architecture
